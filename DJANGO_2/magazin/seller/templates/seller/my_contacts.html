@@ -1,0 +1,46 @@
+{% extends 'seller/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="contects-background-img">
+    <div class="background">
+        <div class="conteiner">
+            <div class="main-inner">
+                <h1 class="title-text">
+                    Мои контакты
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-backgroung">
+    <div class="conteiner">
+        <div class="my-contect-inner">
+            <h1><img class="icon" src="{% static 'seller/images/discord-color.png' %}"></h1>
+            <h1 class="my-contects-text">Discord:</h1>
+            <h1 class="my-contects-text">Петрович#7843</h1>
+        </div>
+        <div class="my-contect-inner">
+            <h1><img class="icon" src="{% static 'seller/images/gmail-color.png' %}"></h1>
+            <h1 class="my-contects-text">Gmail:</h1>
+            <h1 class="my-contects-text">ricktick626@gmail.com</h1>
+        </div>
+        <div class="my-contect-inner">
+            <h1><img class="icon" src="{% static 'seller/images/steam-color.png' %}"></h1>
+            <h1 class="my-contects-text">Steam:</h1>
+            <h1><a class="my-contects-link" href="https://steamcommunity.com/profiles/76561199077088991/">
+                    https://steamcommunity.com/profiles/76561199077088991/</a></h1>
+        </div>
+        <div class="my-contect-inner">
+            <h1><img class="icon" src="{% static 'seller/images/telegram-color.png' %}"></h1>
+            <h1 class="my-contects-text">Telegram:</h1>
+            <h1><a class="my-contects-link" href="https://t.me/RikiTick16">https://t.me/RikiTick16</a></h1>
+        </div>
+        <div class="my-contect-inner">
+            <h1><img class="icon" src="{% static 'seller/images/vkontakte-color.png' %}"></h1>
+            <h1 class="my-contects-text">Вконтакте:</h1>
+            <h1><a class="my-contects-link" href="https://vk.com/id547532342">https://vk.com/id547532342</a></h1>
+        </div>
+    </div>
+</div>
+{% endblock %}

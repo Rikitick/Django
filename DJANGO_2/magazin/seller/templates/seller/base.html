@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>{{ title }}</title>
+    <link type="text/css" href="{% static 'seller/css/styles.css' %}" rel="stylesheet" />
+    <script type="text/javascript" src="{% static 'seller/js/code.js' %}"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+<header class="header">
+    <div class="conteiner">
+        <div class="header_inner">
+            <div class="header_logo">IT-RiCk</div>
+            <nav class="nav">
+                <a class="nav-link" href="{% url 'home' %}">Главная страница</a>
+                <a class="nav-link" href="{% url 'about' %}">Обо мне</a>
+                <a class="nav-link" href="{% url 'projects' %}">Мои проекты</a>
+                <a class="nav-link" href="{% url 'contacts' %}">Контакты</a>
+                <a class="nav-link" href="{% url 'reviews' %}">Отзывы</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+<footer class="footer">
+    <div class="conteiner">
+        <div class="footer-inner">
+            <div class="footer-text">
+                © 2022 Данные фото были взяты из мультсериала "Rick and Morty".<br>
+                Все права защищены и под присмотром самого Рика :)
+            </div>
+            <nav class="footer-icons">
+                <a class="footer-link" href="https://discord.gg/XBU7T25r"><img class="footer-img" src="{% static 'seller/images/discord-black.png' %}" alt="email"></a>
+                <a class="footer-link" href="https://steamcommunity.com/profiles/76561199077088991/"><img class="footer-img" src="{% static 'seller/images/steam-black.png' %}" alt="steam"></a>
+                <a class="footer-link" href="https://t.me/RikiTick16"><img class="footer-img" src="{% static 'seller/images/telegram-black.png' %}" alt="telegram"></a>
+                <a class="footer-link" href="https://vk.com/id547532342"><img class="footer-img" src="{% static 'seller/images/vk-black.png' %}" alt="vk"></a>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

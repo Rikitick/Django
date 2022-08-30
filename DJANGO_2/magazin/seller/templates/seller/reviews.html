@@ -1,0 +1,100 @@
+{% extends 'seller/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="reviews-img">
+    <div class="background">
+        <div class="conteiner">
+            <div class="main-inner">
+                <h1 class="title-text">
+                    Отзывы
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-backgroung">
+    <div class="conteiner">
+        <div class="reviews-conteiner">
+            {% for i in reviews %}
+            <div class="reviews-main-inner">
+                <div class="reviews-inner">
+                    <div class="reviews">
+                        <div class="review-name">
+                            {{ i.name }}
+                        </div>
+                        <div class="content-inner">
+                            <div class="grade">
+                                Оценка:
+                            </div>
+                            {% if i.star_id == 1 %}
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-on-big.png' %}"></div>
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-off-big.png' %}"></div>
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-off-big.png' %}"></div>
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-off-big.png' %}"></div>
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-off-big.png' %}"></div>
+                            {% elif i.star_id == 2 %}
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-on-big.png' %}"></div>
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-on-big.png' %}"></div>
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-off-big.png' %}"></div>
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-off-big.png' %}"></div>
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-off-big.png' %}"></div>
+                            {% elif i.star_id == 3 %}
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-on-big.png' %}"></div>
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-on-big.png' %}"></div>
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-on-big.png' %}"></div>
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-off-big.png' %}"></div>
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-off-big.png' %}"></div>
+                            {% elif i.star_id == 4 %}
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-on-big.png' %}"></div>
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-on-big.png' %}"></div>
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-on-big.png' %}"></div>
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-on-big.png' %}"></div>
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-off-big.png' %}"></div>
+                            {% elif i.star_id == 5 %}
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-on-big.png' %}"></div>
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-on-big.png' %}"></div>
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-on-big.png' %}"></div>
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-on-big.png' %}"></div>
+                                <div style="width: 20px; height: 20px; padding-right: 5px"><img src="{% static 'seller/images/star-on-big.png' %}"></div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="reviews-header">
+                        Отзыв:</div>
+                    <div class="reviews-text-inner">
+                        <div class="reviews-text">
+                            {{ i.review }}
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-date-inner">
+                    <div class="reviews-date"><center>
+                        Дата публикации: {{ i.time_create }}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="reviews-inner">
+            <div class="reviews-click-header">
+                <div class="reviews-click-header-text">
+                    Вы тоже можете оставить свой отзыв
+                </div>
+            </div>
+            <div class="reviews-click-inner">
+                <a class="reviews-click-backgrund" href="{% url 'add_review' %}">
+                    <div class="reviews-click">
+                        <div class="reviews-click-text">
+                            Оставить отзыв
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

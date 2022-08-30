@@ -1,0 +1,97 @@
+{% extends 'seller/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="project-img">
+    <div class="background">
+        <div class="conteiner">
+            <div class="main-inner">
+                <h1 class="title-text">
+                    {{ project.title }}
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-backgroung">
+    <div class="conteiner">
+        <div class="main-inner">
+			<div class="all">
+		        <input checked type="radio" name="respond" id="desktop">
+			        <article id="slider">
+					        <input checked type="radio" name="slider" id="switch1">
+					        <input type="radio" name="slider" id="switch2">
+					        <input type="radio" name="slider" id="switch3">
+					        <input type="radio" name="slider" id="switch4">
+					        <input type="radio" name="slider" id="switch5">
+				        <div id="slides">
+					        <div id="overflow">
+						        <div class="image">
+									{% if project.img1 != '' %}
+							        	<article><img class="project-one-img" src="{{ project.img1.url }}"></article>
+									{% else %}
+										<article><img class="project-one-img" src="{% static 'seller/images/0ed1d90d-a8b0-43bd-8124-475b55b90377.jpg' %}"></article>
+									{% endif %}
+							        {% if project.img2 != '' %}
+							        	<article><img class="project-one-img" src="{{ project.img2.url }}"></article>
+									{% else %}
+										<article><img class="project-one-img" src="{% static 'seller/images/0ed1d90d-a8b0-43bd-8124-475b55b90377.jpg' %}"></article>
+							        {% endif %}
+									{% if project.img3 != '' %}
+							        	<article><img class="project-one-img" src="{{ project.img3.url }}"></article>
+									{% else %}
+										<article><img class="project-one-img" src="{% static 'seller/images/0ed1d90d-a8b0-43bd-8124-475b55b90377.jpg' %}"></article>
+							        {% endif %}
+									{% if project.img4 != '' %}
+							        	<article><img class="project-one-img" src="{{ project.img4.url }}"></article>
+									{% else %}
+										<article><img class="project-one-img" src="{% static 'seller/images/0ed1d90d-a8b0-43bd-8124-475b55b90377.jpg' %}"></article>
+							        {% endif %}
+									{% if project.img5 != '' %}
+							        	<article><img class="project-one-img" src="{{ project.img5.url }}"></article>
+									{% else %}
+										<article><img class="project-one-img" src="{% static 'seller/images/0ed1d90d-a8b0-43bd-8124-475b55b90377.jpg' %}"></article>
+							        {% endif %}
+						        </div>
+					        </div>
+				        </div>
+				        <div id="controls">
+					        <label for="switch1"></label>
+					        <label for="switch2"></label>
+					        <label for="switch3"></label>
+					        <label for="switch4"></label>
+					        <label for="switch5"></label>
+				        </div>
+				        <div id="active">
+					        <label for="switch1"></label>
+					        <label for="switch2"></label>
+					        <label for="switch3"></label>
+					        <label for="switch4"></label>
+					        <label for="switch5"></label>
+				        </div>
+			        </article>
+	        </div>
+            <div class="project-title">Описание:</div>
+            <div class="project-text">
+                {{ project.content }}
+            </div>
+            <div class="project-title">
+                Код:
+            </div>
+            <div class="project-code-background">
+                <div class="main-inner">
+                    <pre>
+                        <code class="project-code">
+{{ project.code }}
+                        </code>
+                </pre>
+                </div>
+
+            </div>
+            <div class="project-data">
+                Дата публикации: {{ project.time_create }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

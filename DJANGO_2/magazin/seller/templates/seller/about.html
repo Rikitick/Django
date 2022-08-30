@@ -1,0 +1,37 @@
+{% extends 'seller/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="about-background-img">
+    <div class="background">
+        <div class="conteiner">
+            <div class="main-inner">
+                <h1 class="title-text">
+                    Обо мне
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-backgroung">
+    <div class="about-conteiner">
+        <div class="content-inner">
+            <div class="about-main-img"><img class="about-img" src="{% static 'seller/images/fZsFhp2QSwg.jpg' %}" alt="Rick"></div>
+            <div class="about-text-inner">
+                <h1 class="about-text-1">Бритов Роман</h1>
+                <h2 class="about-text-2">16 лет - 2 года опыта</h2>
+                <h4 class="about-text-3">Главный разработчик, Администратор сайта</h4>
+            </div>
+        </div>
+        <div class="content-inner">
+            <div>
+                <h1 class="about-main-text">
+                    Я специализируюсь на создании скриптов, ботов, парсеров на Python и его вспомогательных библиотеках,
+                    а также на создании сайтов с помощью Python Django(этот сайт тому подтверждение). Вместе с этим я
+                    знаком с HTML и CSS, поэтому могу делать HTML-страницы. <br> Из личных качеств могу выделить усидчивость и сосредоточенность.
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

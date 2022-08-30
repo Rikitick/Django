@@ -1,0 +1,31 @@
+{% extends 'seller/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="main-img">
+	<div class="main-background">
+		<div class="conteiner">
+			<div class="main-inner">
+				<h1 class="main-text">
+					Добро пожаловать на страницу проектов Рика.
+					Здесь вы можете увидеть его работы
+				</h1>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="content-backgroung">
+	<div class="conteiner">
+		<div class="content-inner">
+			<h1 class="content-text">
+				Здаров. Меня звать IT-RiCk.
+				Я путешествую по галактикам и мультивселенным для того, чтобы найти наилучшую БУЭ... работу.
+				Вы не подумайте, я не настолько отупел и согласился работать на простых людских работах.
+				Нет, просто я подумал что БУЭЭЭ... нужно сделать хоть что-то хорошое в своей жизни перед тем как
+				сдохнуть. И мне пришло в голову заняться IT.
+			</h1>
+			<div class="content-img-position"><img class="content-img" src="{% static 'seller/images/rick.png' %}" alt="rick"></div>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'seller/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="my-projects-background-img">
+    <div class="background">
+        <div class="conteiner">
+            <div class="main-inner">
+                <h1 class="title-text">
+                    Мои проекты
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-backgroung">
+    <div class="conteiner">
+        {% for i in projects %}
+        <a class="project-inner" href="{{ i.get_absolute_url }}">
+            <div><img class="my-project-img" src="{{ i.img1.url }}"></div>
+            <div class="my-project-inner">
+                <h1 class="my-project-text-1">{{ i.title }}</h1>
+                <div class="my-project-text-2">Дата публикации: {{ i.time_create }}</div>
+                <h2 class="my-project-text-3">{{ i.content }}</h2>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
